@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program63
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("A: "); if (!int.TryParse(Console.ReadLine(), out int a)) { Console.WriteLine("Ошибка."); return; }
+            Console.Write("B: "); if (!int.TryParse(Console.ReadLine(), out int b)) { Console.WriteLine("Ошибка."); return; }
+            Console.Write("C: "); if (!int.TryParse(Console.ReadLine(), out int c)) { Console.WriteLine("Ошибка."); return; }
+
+            int max;
+            if (a >= b && a >= c) max = a;
+            else if (b >= a && b >= c) max = b;
+            else max = c;
+
+            Console.WriteLine($"Максимум: {max}");
+        }
+    }
+}
